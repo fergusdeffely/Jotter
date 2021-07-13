@@ -109,6 +109,7 @@ namespace Jotter
             this.listBoxNotes.Name = "listBoxNotes";
             this.listBoxNotes.Size = new System.Drawing.Size(344, 244);
             this.listBoxNotes.TabIndex = 4;
+            this.listBoxNotes.SelectedIndexChanged += new System.EventHandler(this.listBoxNotes_SelectedIndexChanged);
             // 
             // buttonNew
             // 

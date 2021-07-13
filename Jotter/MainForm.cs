@@ -40,5 +40,12 @@ namespace Jotter
             // ListBox
             this.listBoxNotes.Items.Add(note);
         }
+
+        private void listBoxNotes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Note note = (Note)this.listBoxNotes.SelectedItem;
+
+            // TODO: Update title and note textboxes with contents of selected note
+        }
     }
 }
