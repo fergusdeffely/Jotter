@@ -105,16 +105,10 @@ namespace Jotter
             // 
             this.listBoxNotes.FormattingEnabled = true;
             this.listBoxNotes.ItemHeight = 15;
-            this.listBoxNotes.Items.AddRange(new object[] {
-            "Note 1",
-            "Note 2",
-            "Note 3",
-            "Note 4"});
             this.listBoxNotes.Location = new System.Drawing.Point(395, 57);
             this.listBoxNotes.Name = "listBoxNotes";
             this.listBoxNotes.Size = new System.Drawing.Size(344, 244);
             this.listBoxNotes.TabIndex = 4;
-            this.listBoxNotes.SelectedIndexChanged += new System.EventHandler(this.listBoxNotes_SelectedIndexChanged);
             // 
             // buttonNew
             // 

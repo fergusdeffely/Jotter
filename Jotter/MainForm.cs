@@ -19,39 +19,26 @@ namespace Jotter
             this.notesList = new List<Note>();
 
             InitializeComponent();
-
-            UpdateControls(true);
         }
 
         private void buttonAddNote_Click(object sender, EventArgs e)
         {
+            // Create a new note
             Note note = new Note(this.textBoxTitle.Text, this.textBoxNote.Text);
+
+            // Add the note to the existing list of notes
             this.notesList.Add(note);
 
-            UpdateControls(true);
-
+            // Tell the user 
             MessageBox.Show($"Added note : {note.Title}", "Note added", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
 
-        private void listBoxNotes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Note selectedNote = (Note)this.listBoxNotes.SelectedItem;
-        }
+            // Update the UI:
 
-        private void UpdateControls(bool editing)
-        {
-            if(editing)
-            {
-                this.buttonNew.Visible = true;
-                this.buttonAddSaveNote.Text = "Save";
-            }
-            else
-            {
-                this.buttonNew.Visible = false;
-                this.buttonAddSaveNote.Text = "Add";
-            }
-
-            this.labelYouHavenNotes.Text = $"You have {this.notesList.Count} notes"; 
+            // Label
+            this.labelYouHavenNotes.Text = $"You have {this.notesList.Count} notes.";
+            
+            // ListBox
+            this.listBoxNotes.Items.Add(note);
         }
     }
 }

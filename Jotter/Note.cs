@@ -19,5 +19,10 @@ namespace Jotter
 
         public string Title { get => title; set => title = value; }
         public string NoteText { get => notetext; set => notetext = value; }
+
+        public override string ToString()
+        {
+            return this.title;
+        }
     }
 }
